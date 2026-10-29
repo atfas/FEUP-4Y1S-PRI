@@ -62,11 +62,15 @@ def clean_cards(cards):
 
         print_ref = card.get("prints", [])
         for pr in print_ref:
+            # The artist's name is already inside the nested artist object; keeping the
+            # separate print.artist_name would make both flatten to the same Solr field.
+            pr.pop("artist_name", None)
+
             expansion = pr.get("expansion", {})
             expansion.pop("cards", None)
             expansion.pop("has_page", None)
             expansion.pop("id", None)
-            
+
             artist = pr.get("artist")
             artist.pop("cards", None)
             artist.pop("id", None)
