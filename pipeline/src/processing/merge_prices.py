@@ -1,10 +1,10 @@
 """Merge TCGplayer market prices into the search-ready cards.
 
-Run order:  build_search_data.py  ->  merge_prices.py
-Reads:      data/search/cards.json   (from build_search_data.py)
-            data/prices.json         (from extracting/extract_prices.py)
-Writes:     data/search/cards.json   (updated in place; running this twice gives the same result)
-            data/search/price_report.json
+Run order:  pipeline/src/processing/process_cards.py  ->  pipeline/src/processing/merge_prices.py
+Reads:      data/collection/cards.json  (from process_cards.py)
+            data/prices.json            (from pipeline/src/extracting/extract_prices.py)
+Writes:     data/collection/cards.json  (updated in place; running this twice gives the same result)
+            data/collection/price_report.json
 
 Each print of a card gets a "prices" list, one entry per TCGplayer product and printing:
 
@@ -33,12 +33,10 @@ Anything still ambiguous or unmatched is left out and listed in the report, neve
 import json
 import re
 from collections import Counter, defaultdict
-from pathlib import Path
 
-from processing.process_cards import normalize  # same name matching as the rest of the pipeline
+from pipeline.src.paths import COLLECTION_DIR, DATA_DIR
+from pipeline.src.processing.process_cards import normalize  # same name matching as the rest of the pipeline
 
-DATA_DIR = Path("data")
-SEARCH_DIR = Path("search")
 MIN_GROUP_VOTES = 3  # a group needs this many matching products before its expansion is trusted
 
 
@@ -166,9 +164,9 @@ def price_entries(product, method):
 
 
 def merge():
-    cards_path = SEARCH_DIR / "cards.json"
+    cards_path = COLLECTION_DIR / "cards.json"
     prices_path = DATA_DIR / "prices.json"
-    for path, hint in ((cards_path, "build_search_data.py"), (prices_path, "extracting/extract_prices.py")):
+    for path, hint in ((cards_path, "process_cards.py"), (prices_path, "extract_prices.py")):
         if not path.exists():
             raise SystemExit(f"{path} not found. Run {hint} first.")
 
@@ -229,7 +227,7 @@ def merge():
         "unmatched_examples": unmatched_examples,
         "ambiguous_examples": ambiguous_examples,
     }
-    (SEARCH_DIR / "price_report.json").write_text(
+    (COLLECTION_DIR / "price_report.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8"
     )
 
@@ -237,7 +235,7 @@ def merge():
     print(f"{len(group_expansion)}/{len(groups)} groups mapped to an expansion")
     print(f"{cards_with_prices}/{len(cards)} cards have a market price "
           f"({prints_with_prices}/{total_prints} prints; {len(matched_prints)} matched a product)")
-    print(f"details: {SEARCH_DIR / 'price_report.json'}")
+    print(f"details: {COLLECTION_DIR / 'price_report.json'}")
     return report
 
 

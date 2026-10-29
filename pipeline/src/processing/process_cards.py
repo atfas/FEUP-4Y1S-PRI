@@ -2,7 +2,7 @@
 
 Reads the extracted files (faithful to the wiki):
     cards.json, pokemon.json, artist.json, expansions.json
-Writes the search-ready versions to OUT_DIR:
+Writes the search-ready versions to COLLECTION_DIR:
     cards.json, pokemon.json, artists.json, expansions.json, links_report.json
 
 Cards, Pokémon, artists and expansions stay separate collections and point at each other by id.
@@ -23,8 +23,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from urllib.parse import quote
 
-EXTRACTED_DIR = Path("data")           # where the extracted json files are
-OUT_DIR = Path("search")
+from pipeline.src.paths import COLLECTION_DIR, DATA_DIR
+
+EXTRACTED_DIR = DATA_DIR               # where the extracted json files are
+OUT_DIR = COLLECTION_DIR
 
 FILE_PATH_URL = "https://bulbapedia.bulbagarden.net/wiki/Special:FilePath/"
 
@@ -138,30 +140,17 @@ def merge_prints(raw_prints, gallery, expansions):
     prints = []
     for raw_print in raw_prints:
         merged = dict(raw_print)
-        #print(merged)
-        #print(f"merge_prints debug: processing print {raw_print.get('expansion') or raw_print.get('deck_kit') or ''!r}")
         name = raw_print.get("expansion") or raw_print.get("deck_kit") or ""
         matches = unused.get(normalize(name))
-        #print(unused)
         if matches:
             entry = matches.pop(0)
-            print(entry)
             merged["image_url"] = image_url(entry.get("image"))
             merged["illustrator"] = entry.get("illustrator")
-            #print(f"merge_prints debug: matched {name!r} -> {entry.get('set')!r}, image={image_url(entry.get('image'))}")
-        else:
-            #print(f"merge_prints debug: no gallery match for {name!r}")
-            pass
-        #merged["expansion"] = merged.get("expansion" and expa)
         prints.append(merged)
 
     for leftovers in unused.values():
-        print(f"current prints {prints}")
         for entry in leftovers:
-            print(f"an entry {entry}")
-            input("Press Enter to continue...")  # Pause for debugging
             prints.append({
-                #"expansion_id": entry.get("set") and expansions.link(entry.get("set")),
                 "image_url": image_url(entry.get("image")),
                 "illustrator": entry.get("illustrator"),
             })
@@ -181,7 +170,7 @@ def rules_text(card_text):
 
 def pokemon_names(raw):
     """Pokémon a card shows: the pokedex names, else the infobox species."""
-    names = [entry.get("name") for entry in raw.get("pokedex", [])]
+    names = [entry.get("name") for entry in raw.get("pokedex") or []]
     if not any(names):
         names = [raw.get("infobox", {}).get("species")]
     return unique_names(names)
@@ -305,7 +294,7 @@ def build():
 
         artist_names = unique_names(list(raw.get("artists", [])) + [p.get("illustrator") for p in prints])
         pokemon_list = pokemon_names(raw)
-        for entry in raw.get("pokedex", []):
+        for entry in raw.get("pokedex") or []:
             number = to_int(entry.get("ndex"))
             if entry.get("name") and number is not None:
                 dex_numbers.setdefault(normalize(entry["name"]), number)

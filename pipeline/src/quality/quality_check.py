@@ -5,6 +5,8 @@ import statistics
 from datetime import datetime, timezone
 from pathlib import Path
 
+from pipeline.src.paths import DATA_DIR, REPORTS_DIR
+
 
 SAMPLE_SIZE = 1000
 SAMPLE_SEED = 42
@@ -235,7 +237,7 @@ def _markdown_table(headers, rows):
     return "\n".join(lines)
 
 
-def build_quality_report(data_dir="data", output_path=None):
+def build_quality_report(data_dir=DATA_DIR, output_path=None):
     """Write a Markdown quality report and return its path."""
     data_dir = Path(data_dir)
     cards = _read_json(data_dir / "cards.json")
@@ -631,9 +633,10 @@ def build_quality_report(data_dir="data", output_path=None):
     lines.append("")
 
     if output_path is None:
-        output_path = data_dir.parent / "quality_report.md"
+        output_path = REPORTS_DIR / "quality_report.md"
     else:
         output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text("\n".join(lines), encoding="utf-8")
     return output_path
 

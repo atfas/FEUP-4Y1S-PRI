@@ -1,21 +1,21 @@
 """Characterize the final card collection (search/*.json).
 
-Writes eda/stats.json (all numbers quoted in the report) and report/figures/*.pdf
+Writes data/reports/eda/stats.json (all numbers quoted in the report) and report/figures/*.pdf
 """
 import collections
 import json
 import re
 import statistics as st
-from pathlib import Path
 
 import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "search"
-FIG = ROOT / "report" / "figures"
+from pipeline.src.paths import COLLECTION_DIR, EDA_REPORTS_DIR, FIGURES_DIR
+
+DATA = COLLECTION_DIR
+FIG = FIGURES_DIR
 FIG.mkdir(parents=True, exist_ok=True)
 
 cards = json.load(open(DATA / "cards.json"))
@@ -154,7 +154,8 @@ stats["card_text"] = {
 }
 stats["stage"] = dict(collections.Counter(c.get("stage") or "None" for c in cards).most_common(10))
 
-(ROOT / "eda" / "stats.json").write_text(json.dumps(stats, indent=2, ensure_ascii=False))
+EDA_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+(EDA_REPORTS_DIR / "stats.json").write_text(json.dumps(stats, indent=2, ensure_ascii=False), encoding="utf-8")
 
 # ================= figures =================
 plt.rcParams.update({"font.size": 8, "figure.dpi": 150, "axes.spines.top": False, "axes.spines.right": False})

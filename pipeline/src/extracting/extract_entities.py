@@ -5,9 +5,10 @@ from pathlib import Path
 
 import mwparserfromhell
 
-from extracting.wikitextUtils import (disambiguation_target, drop_count_sentences,
-                                      is_disambiguation, render, sections, template_name,
-                                      title_of)
+from pipeline.src.extracting.wikitextUtils import (disambiguation_target, drop_count_sentences,
+                                                   is_disambiguation, render, sections,
+                                                   template_name, title_of)
+from pipeline.src.paths import DATA_DIR
 
 
 def _normalized_heading(heading):
@@ -176,7 +177,7 @@ def _process_pokemon(data_dir):
     return pokemon
 
 
-def build_json(data_dir="data"):
+def build_json(data_dir=DATA_DIR):
     """Build the two entity indexes from the saved Bulbapedia pages."""
     data_dir = Path(data_dir)
     _process_artists(data_dir)

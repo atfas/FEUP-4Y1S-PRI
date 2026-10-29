@@ -1,6 +1,6 @@
 """Generic helpers for turning MediaWiki wikitext into plain data.
 
-Used by cards_json.py now, and meant to be reused for the artist and Pokémon pages later.
+Used by the card, entity and expansion extractors.
 Requires:  pip install mwparserfromhell
 """
 import re

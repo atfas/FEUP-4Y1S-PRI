@@ -1,7 +1,7 @@
 """Download Pokémon card prices from tcgcsv.com into data/tcgcsv/.
 
-Run order:  fetching/fetch_prices.py  ->  extracting/extract_prices.py  ->  merge_prices.py
-Requires:   pip install requests
+Run order:  pipeline/src/fetching/fetch_prices.py  ->  pipeline/src/extracting/extract_prices.py
+            ->  pipeline/src/processing/merge_prices.py
 
 tcgcsv.com mirrors TCGplayer's catalog and prices, refreshed once a day (around 20:00 UTC).
 
@@ -30,6 +30,8 @@ from pathlib import Path
 
 import requests
 
+from pipeline.src.paths import DATA_DIR
+
 BASE = "https://tcgcsv.com/tcgplayer"
 LAST_UPDATED_URL = "https://tcgcsv.com/last-updated.txt"
 CATEGORY = 3  # Pokémon (English). 85 is Pokémon Japan.
@@ -39,7 +41,7 @@ CSV_NAME = "ProductsAndPrices.csv"
 USER_AGENT = "bulbapedia-search-project/0.1 (contact: you@example.com)"
 DELAY = 0.5  # seconds between requests; the site's own example uses 0.25
 
-OUT_DIR = Path("data") / "tcgcsv"
+OUT_DIR = DATA_DIR / "tcgcsv"
 
 
 def make_session():

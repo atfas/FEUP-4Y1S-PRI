@@ -1,6 +1,6 @@
 """Turn the saved tcgcsv files into data/prices.json: one record per card product.
 
-Run order:  fetching/fetch_prices.py  ->  extracting/extract_prices.py
+Run order:  pipeline/src/fetching/fetch_prices.py  ->  pipeline/src/extracting/extract_prices.py
 
 The saved CSVs have one row per product and printing. This groups the rows by product, so each
 record looks like:
@@ -25,6 +25,8 @@ import csv
 import json
 import re
 from pathlib import Path
+
+from pipeline.src.paths import DATA_DIR
 
 CSV_NAME = "ProductsAndPrices.csv"
 
@@ -73,11 +75,11 @@ def price_row(row):
     return {"sub_type": row.get("subTypeName") or None, **values}
 
 
-def build_json(data_dir="data"):
+def build_json(data_dir=DATA_DIR):
     raw_dir = Path(data_dir) / "tcgcsv"
     groups_path = raw_dir / "groups.json"
     if not groups_path.exists():
-        raise SystemExit(f"{groups_path} not found. Run fetching/fetch_prices.py first.")
+        raise SystemExit(f"{groups_path} not found. Run pipeline/src/fetching/fetch_prices.py first.")
 
     snapshot_path = raw_dir / "last_updated.txt"
     snapshot = snapshot_path.read_text(encoding="utf-8").strip() if snapshot_path.exists() else None

@@ -1,6 +1,6 @@
 """Turn the saved card wikitext into data/cards.json: one object per card.
 
-Run order:  fetching/fetch_cards.py  ->  extracting/extract_cards.py
+Run order:  pipeline/src/fetching/fetch_cards.py  ->  pipeline/src/extracting/extract_cards.py
 Requires:   mwparserfromhell and extracting/wikitextUtils.py
 
 Each card looks like:
@@ -34,8 +34,9 @@ from urllib.parse import unquote
 
 import mwparserfromhell
 
-from extracting.wikitextUtils import (UNKNOWN_TEMPLATES, card_files, categories, read_blocks,
-                                      render, template_name, title_of)
+from pipeline.src.extracting.wikitextUtils import (UNKNOWN_TEMPLATES, card_files, categories,
+                                                   read_blocks, render, template_name, title_of)
+from pipeline.src.paths import DATA_DIR
 
 # Infobox fields to keep. Set to None to keep every English field.
 INFOBOX_FIELDS = [
@@ -352,6 +353,7 @@ def process_card(path):
         "artists": read_artists(category_names, prints),
         "prints": prints,
         "card_text": read_card_text(templates),
+        "pokedex": read_pokedex(templates),
         "release_information": read_blocks(wikitext, "release information"),
         "trivia": read_blocks(wikitext, "trivia"),
         "categories": category_names,
@@ -359,7 +361,7 @@ def process_card(path):
     return card, infobox is not None
 
 
-def build_json(data_dir="data"):
+def build_json(data_dir=DATA_DIR):
     out_path = Path(data_dir) / "cards.json"
 
     cards = []
@@ -397,7 +399,9 @@ def build_json(data_dir="data"):
     print("writing json...", flush=True)
     out_path.write_text(json.dumps(cards, indent=2, ensure_ascii=False), encoding="utf-8")
 
+    with_pokedex = sum(bool(card.get("pokedex")) for card in cards)
     print(f"{len(cards)} cards -> {out_path}")
+    print(f"{with_pokedex} cards with Pokédex data")
     print(f"{len(no_infobox)} with no infobox: {no_infobox[:5]}")
     print(f"{len(no_artist)} with no artist: {no_artist[:5]}")
     print("prints by how their image was linked:", dict(links.most_common()))

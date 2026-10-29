@@ -1,9 +1,11 @@
 import re
 import json
-from fetching.helper import BATCH, page_links, chunks, wikitext_batch, log
-from fetching.storage import wikitext_path, load_redirects, redirects_path
+from pipeline.src.fetching.helper import BATCH, page_links, chunks, wikitext_batch, log
+from pipeline.src.fetching.storage import wikitext_path, load_redirects, redirects_path
+from pipeline.src.paths import DATA_DIR
 
-def build_dataset(out_dir="data", max_expansions=None):
+
+def build_dataset(out_dir=DATA_DIR, max_expansions=None):
     # step 1: gather a list of all expansions in the tcg
     log("step 1: expansions list")
     expansions = [t for t in page_links("List_of_Pokémon_Trading_Card_Game_expansions") if t.endswith(" (TCG)")]

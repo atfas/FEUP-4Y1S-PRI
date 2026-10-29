@@ -7,15 +7,15 @@ import math
 import re
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
-from pathlib import Path
 
 import pandas as pd
 from bs4 import BeautifulSoup
 
+from pipeline.src.paths import COLLECTION_DIR, EDA_REPORTS_DIR
 
-PROJECT_DIR = Path(__file__).resolve().parents[1]
-INPUT_DIR = PROJECT_DIR / "search"
-OUTPUT_DIR = Path(__file__).resolve().parent / "eda_output"
+
+INPUT_DIR = COLLECTION_DIR
+OUTPUT_DIR = EDA_REPORTS_DIR / "exploratory"
 
 DATASETS = ("cards", "pokemon", "artists", "expansions")
 ABBREVIATION_EXPANSIONS = {

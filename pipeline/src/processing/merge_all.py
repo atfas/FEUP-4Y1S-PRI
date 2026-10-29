@@ -1,5 +1,7 @@
 import json
 
+from pipeline.src.paths import COLLECTION_DIR
+
 
 def strip_name_whitespace(value):
     if isinstance(value, dict):
@@ -74,16 +76,16 @@ def clean_cards(cards):
     return cleaned_cards
 
 def main():
-    cards = json.load(open("search/cards.json", encoding="utf-8"))
-    pokemon = json.load(open("search/pokemon.json", encoding="utf-8"))
-    artists = json.load(open("search/artists.json", encoding="utf-8"))
-    expansions = json.load(open("search/expansions.json", encoding="utf-8"))
+    cards = json.loads((COLLECTION_DIR / "cards.json").read_text(encoding="utf-8"))
+    pokemon = json.loads((COLLECTION_DIR / "pokemon.json").read_text(encoding="utf-8"))
+    artists = json.loads((COLLECTION_DIR / "artists.json").read_text(encoding="utf-8"))
+    expansions = json.loads((COLLECTION_DIR / "expansions.json").read_text(encoding="utf-8"))
     merged_cards = merge_data(cards, pokemon, artists, expansions)
-    
+
     cleaned_cards = clean_cards(merged_cards)
-    
+
     # save to databank.json
-    with open("search/databank.json", "w", encoding="utf-8") as f:
+    with open(COLLECTION_DIR / "databank.json", "w", encoding="utf-8") as f:
         json.dump(cleaned_cards, f, indent=2, ensure_ascii=False)
 
 if __name__ == "__main__":

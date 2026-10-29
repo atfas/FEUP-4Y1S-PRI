@@ -1,6 +1,7 @@
 """Fetch the Pokémon and artist pages for every card in data/cards.json.
 
-Run order:  fetching/fetch_cards.py  ->  extracting/extract_cards.py  ->  fetching/fetch_entities.py
+Run order:  pipeline/src/fetching/fetch_cards.py  ->  pipeline/src/extracting/extract_cards.py
+            ->  pipeline/src/fetching/fetch_entities.py
 
 Where the names come from (all from cards.json, no extra downloads):
     Pokémon:  the "name" of each entry in the card's "pokedex" list.
@@ -21,8 +22,9 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-from fetching.helper import chunks, wikitext_batch
-from fetching.storage import safe_name
+from pipeline.src.fetching.helper import chunks, wikitext_batch
+from pipeline.src.fetching.storage import safe_name
+from pipeline.src.paths import DATA_DIR
 
 BATCH_SIZE = 50
 POKEMON_BATCH_SIZE = 25  # Pokémon pages are long, so ask for fewer at a time
@@ -48,22 +50,22 @@ def page_path(folder, title):
 def pokemon_names(card):
     """The Pokémon this card shows. Usually one; Tag Team style cards can have two."""
     names = []
-    for entry in card["pokedex"]:
+    for entry in card.get("pokedex") or []:
         name = entry.get("name")
         if name and name not in names:
             names.append(name)
     if not names:  # no pokedex entry on this card: use the infobox species instead
-        species = card["infobox"].get("species")
+        species = (card.get("infobox") or {}).get("species")
         if species:
             names.append(species)
     return names
 
 
-def build_indexes(data_dir="data"):
+def build_indexes(data_dir=DATA_DIR):
     """Read cards.json, build {name: [card titles]} for Pokémon and artists, and save both."""
     cards_path = Path(data_dir) / "cards.json"
     if not cards_path.exists():
-        raise SystemExit(f"{cards_path} not found. Run extracting/extract_cards.py first.")
+        raise SystemExit(f"{cards_path} not found. Run pipeline/src/extracting/extract_cards.py first.")
     cards = read_json(cards_path, [])
 
     pokemon = defaultdict(list)
@@ -78,9 +80,9 @@ def build_indexes(data_dir="data"):
         for name in names:
             pokemon[name].append(card["title"])
 
-        if not card["artists"]:
+        if not card.get("artists"):
             no_artist.append(card["title"])
-        for name in card["artists"]:
+        for name in card.get("artists") or []:
             artists[name].append(card["title"])
 
     pokemon = dict(sorted(pokemon.items()))
@@ -144,7 +146,7 @@ def summarize(folder):
 
 
 # ---------- the two entity types ----------
-def fetch_pokemon(pokemon, data_dir="data"):
+def fetch_pokemon(pokemon, data_dir=DATA_DIR):
     folder = Path(data_dir) / "pokemon"
     print(f"pokemon: {len(pokemon)} names")
 
@@ -154,7 +156,7 @@ def fetch_pokemon(pokemon, data_dir="data"):
     summarize(folder)
 
 
-def fetch_artists(artists, data_dir="data"):
+def fetch_artists(artists, data_dir=DATA_DIR):
     folder = Path(data_dir) / "artists"
     print(f"artists: {len(artists)} names")
 

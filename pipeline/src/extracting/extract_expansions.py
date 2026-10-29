@@ -5,7 +5,8 @@ from pathlib import Path
 
 import mwparserfromhell
 
-from extracting.wikitextUtils import render, sections, template_name, title_of
+from pipeline.src.extracting.wikitextUtils import render, sections, template_name, title_of
+from pipeline.src.paths import DATA_DIR
 
 
 ONLY_EXPANSIONS_WITH_CARDS = True
@@ -73,7 +74,7 @@ def _normalized(value):
     return " ".join(value.split()).casefold()
 
 
-def build_json(data_dir="data"):
+def build_json(data_dir=DATA_DIR):
     """Build the expansion JSON from TCG pages in each data subdirectory."""
     data_dir = Path(data_dir)
     expansions = []
@@ -116,7 +117,7 @@ def build_json(data_dir="data"):
     )
     print(f"{len(expansions)} expansions -> {out_path}")
 
-    # The full list of names lets build_search_data.py tell "<set> cards" categories apart from
+    # The full list of names lets process_cards.py tell "<set> cards" categories apart from
     # real tags like "Holographic cards", even for sets that are filtered out above.
     names_path = data_dir / "expansion_names.json"
     names_path.write_text(
