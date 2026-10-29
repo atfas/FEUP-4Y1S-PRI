@@ -1,4 +1,4 @@
-"""Characterize the final card collection (search/*.json).
+"""Characterize the final card collection (data/collection/*.json).
 
 Writes data/reports/eda/stats.json (all numbers quoted in the report) and report/figures/*.pdf
 """
