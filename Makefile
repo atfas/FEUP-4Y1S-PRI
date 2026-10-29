@@ -16,7 +16,7 @@ exploratory:
 
 # Flatten the merged corpus for Solr -> data/_solr/
 flatten:
-	uv run python -m solr.src.flatten data/_collections/databank.json --out-dir data/_solr --schema
+	uv run python -m solr.src.flatten data/_collections/databank.json --out-dir data/_solr --sep __ --schema
 
 # Needs a LaTeX installation with the acmart class (or upload report/ to Overleaf)
 report:

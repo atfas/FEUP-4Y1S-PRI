@@ -2,7 +2,7 @@
 
     python -m solr.src.flatten data/_collections/cards.json data/_collections/pokemon.json \
         data/_collections/artists.json data/_collections/expansions.json \
-        --out-dir data/_solr --schema
+        --out-dir data/_solr --sep __ --schema
 
 Each file becomes data/_solr/<name>.json (a JSON array, which Solr's /update handler accepts).
 
@@ -37,7 +37,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
-SEPARATOR = "_"
+SEPARATOR = "__"
 TIMESTAMP = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:?\d{2})?$")
 SOLR_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 BIG_INT = 2 ** 31 - 1  # larger integers need Solr's plong instead of pint
@@ -226,7 +226,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("files", nargs="+", help="search-ready json files (each a list of documents)")
     parser.add_argument("--out-dir", default=DEFAULT_OUT_DIR)
-    parser.add_argument("--sep", default=SEPARATOR, help='joins parent and child names (default "_")')
+    parser.add_argument("--sep", default=SEPARATOR, help='joins parent and child names (default "__")')
     parser.add_argument("--schema", action="store_true", help="also write <name>_schema.json (Schema API commands)")
     parser.add_argument("--lines", action="store_true", help="write one document per line instead of a JSON array")
     args = parser.parse_args()

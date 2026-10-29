@@ -9,7 +9,7 @@ Schema API commands:
 make flatten
 # or
 uv run python -m solr.src.flatten data/_collections/databank.json \
-    --out-dir data/_solr --schema
+    --out-dir data/_solr --sep __ --schema
 ```
 
 Generated files live in `data/_solr/` and are not committed.
