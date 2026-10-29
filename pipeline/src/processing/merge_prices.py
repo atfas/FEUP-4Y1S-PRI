@@ -1,10 +1,10 @@
 """Merge TCGplayer market prices into the search-ready cards.
 
 Run order:  pipeline/src/processing/process_cards.py  ->  pipeline/src/processing/merge_prices.py
-Reads:      data/collection/cards.json  (from process_cards.py)
+Reads:      data/_collections/cards.json  (from process_cards.py)
             data/prices.json            (from pipeline/src/extracting/extract_prices.py)
-Writes:     data/collection/cards.json  (updated in place; running this twice gives the same result)
-            data/collection/price_report.json
+Writes:     data/_collections/cards.json  (updated in place; running this twice gives the same result)
+            data/_collections/price_report.json
 
 Each print of a card gets a "prices" list, one entry per TCGplayer product and printing:
 

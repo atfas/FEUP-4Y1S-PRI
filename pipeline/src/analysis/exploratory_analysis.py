@@ -247,7 +247,7 @@ def write_report(
             "",
             f"Generated: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",
             "",
-            "Source: the search-ready JSON collections in `data/collection/`. The source files are not modified.",
+            "Source: the search-ready JSON collections in `data/_collections/`. The source files are not modified.",
             "HTML markup is stripped, standalone extractor section markers are removed, and derived text is case-folded.",
             f"{expanded_count} known abbreviation occurrence(s) were expanded. Unknown uppercase tokens are review candidates, not auto-corrected.",
             "",

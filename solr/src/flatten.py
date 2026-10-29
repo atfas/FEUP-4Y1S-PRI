@@ -1,10 +1,10 @@
 """Flatten the search-ready documents for Solr.
 
-    python -m solr.src.flatten data/collection/cards.json data/collection/pokemon.json \
-        data/collection/artists.json data/collection/expansions.json \
-        --out-dir data/collection/solr --schema
+    python -m solr.src.flatten data/_collections/cards.json data/_collections/pokemon.json \
+        data/_collections/artists.json data/_collections/expansions.json \
+        --out-dir data/_solr --schema
 
-Each file becomes data/collection/solr/<name>.json (a JSON array, which Solr's /update handler accepts).
+Each file becomes data/_solr/<name>.json (a JSON array, which Solr's /update handler accepts).
 
 How a document is flattened (recursively, innermost first)
 ----------------------------------------------------------
@@ -42,7 +42,7 @@ TIMESTAMP = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2
 SOLR_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 BIG_INT = 2 ** 31 - 1  # larger integers need Solr's plong instead of pint
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_OUT_DIR = PROJECT_ROOT / "data" / "collection" / "solr"
+DEFAULT_OUT_DIR = PROJECT_ROOT / "data" / "_solr"
 
 
 # ---------- values ----------

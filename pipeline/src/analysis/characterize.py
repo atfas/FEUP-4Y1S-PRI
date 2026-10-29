@@ -1,6 +1,6 @@
-"""Characterize the final card collection (data/collection/*.json).
+"""Characterize the final card collection (data/_collections/*.json).
 
-Writes data/reports/eda/stats.json (all numbers quoted in the report) and report/figures/*.pdf
+Writes data/_reports/eda/stats.json (all numbers quoted in the report) and report/figures/*.pdf
 """
 import collections
 import json
