@@ -20,3 +20,5 @@ report/main.pdf
 .DS_Store
 
 .vscode
+evaluation/output/
+evaluation/trec_eval/

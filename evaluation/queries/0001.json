@@ -1,0 +1,10 @@
+{
+  "query": "attacks discard pile",
+  "fields": "id,score",
+  "limit": 1000,
+  "sort": "score desc,id asc",
+  "params": {
+    "defType": "edismax",
+    "qf": "title name rules_text card_text__effect"
+  }
+}

@@ -1,4 +1,4 @@
-.PHONY: all pipeline eda exploratory flatten report clean
+.PHONY: all pipeline eda exploratory flatten evaluate report clean
 
 all: pipeline eda
 
@@ -17,6 +17,18 @@ exploratory:
 # Flatten the merged corpus for Solr -> data/_solr/
 flatten:
 	uv run python -m solr.src.flatten data/_collections/databank.json --out-dir data/_solr --sep __ --schema
+
+evaluate:
+	@if [ ! -x evaluation/trec_eval/trec_eval ]; then \
+		./evaluation/build_trec_eval.sh; \
+	fi
+
+	@if [ ! -x evaluation/trec_eval/trec_eval ]; then \
+		echo "Failed to build evaluation/trec_eval/trec_eval" >&2; \
+		exit 1; \
+	fi
+
+	./evaluation/evaluate.sh
 
 # Needs a LaTeX installation with the acmart class (or upload report/ to Overleaf)
 report:
