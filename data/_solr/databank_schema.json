@@ -1,4 +1,18 @@
 {
+    "add-field-type": {
+      "name": "text_card_en",
+      "class": "solr.TextField",
+      "positionIncrementGap": "100",
+      "analyzer": {
+        "tokenizer": { "class": "solr.StandardTokenizerFactory" },
+        "filters": [
+          { "class": "solr.ASCIIFoldingFilterFactory" },
+          { "class": "solr.LowerCaseFilterFactory" },
+          { "class": "solr.EnglishPossessiveFilterFactory" },
+          { "class": "solr.KStemFilterFactory" }
+        ]
+      }
+    },
   "add-field": [
     {
       "name": "card_text__1",
@@ -664,6 +678,14 @@
       "multiValued": false,
       "stored": true,
       "indexed": true
-    }
-  ]
+    },
+    { "name": "effect_all", "type": "text_card_en", "multiValued": true, "stored": false, "indexed": true },
+    ],
+      "add-copy-field": [
+      { "source": "rules_text", "dest": "effect_all" },
+      { "source": "card_text__effect", "dest": "effect_all" },
+      { "source": "card_text__abilityeffect", "dest": "effect_all" },
+      { "source": "card_text__attackeffect", "dest": "effect_all" },
+      { "source": "card_text__discard", "dest": "effect_all" }
+    ],
 }

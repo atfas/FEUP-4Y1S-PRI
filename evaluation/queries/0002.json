@@ -1,0 +1,14 @@
+{
+  "query": "(attach OR put) energy (discard) (hand OR Pokémon)",
+  "fields": "id,score",
+  "limit": 30,
+  "sort": "score desc,id asc",
+  "params": {
+    "defType": "edismax",
+    "qf": "effect_all",
+    "pf": "effect_all^5",
+    "ps": "3",
+    "mm": "3",
+    "debugQuery": "true"
+  }
+}

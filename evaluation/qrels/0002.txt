@@ -1,0 +1,76 @@
+card:kingdra-primal-clash-108 1
+card:giovanni-s-charisma-151-161 1
+card:swanna-cosmic-eclipse-60 1
+card:rose-darkness-ablaze-168 1
+card:zapdos-aquapolis-h32 1
+card:suicune-aquapolis-h25 0
+card:fisherman-skyridge-125 1
+card:entei-aquapolis-h8 0
+card:klara-chilling-reign-145 1
+card:fire-crystal-unbroken-bonds-173 1
+card:minun-furious-fists-32 1
+card:night-stretcher-shrouded-fable-61 1
+card:energy-retrieval-base-set-81 1
+card:toucannon-vivid-voltage-145 1
+card:lapras-v-sword-shield-49 1 
+card:shaymin-platinum-15 1
+card:torkoal-cosmic-eclipse-29 1
+card:moltres-majestic-dawn-10 1
+card:rotom-cosmic-eclipse-86 1
+card:giratina-ultra-prism-58 1
+card:latios-fusion-strike-194 1
+card:pachirisu-call-of-legends-18 1
+card:energy-restore-expedition-141 1
+card:ursaluna-astral-radiance-124 1
+card:talonflame-guardians-rising-111 1
+card:porygon-z-chilling-reign-118 1
+card:roark-paradox-rift-173 1
+card:shroodle-paldea-evolved-144 1
+card:pikachu-black-white-115 1
+card:melmetal-darkness-ablaze-130 1
+card:probopass-guardians-rising-86 1
+card:ponyta-steam-siege-16 1
+card:zekrom-roaring-skies-64 1
+card:sandaconda-v-rebel-clash-108 1
+card:moltres-skyridge-h20 1
+card:skitty-ex-ruby-sapphire-70 1
+card:togetic-unbroken-bonds-137 1
+card:pikachu-30th-celebration-48 1
+card:varoom-paldean-fates-64 1
+card:pichu-ex-sandstorm-20 1
+card:raikou-skyridge-h26 1
+card:recycle-energy-neo-genesis-105 0
+card:oricorio-surging-sparks-26 1
+card:lampent-rebel-clash-32 1
+card:kyogre-cosmic-eclipse-53 1
+card:max-rod-prismatic-evolutions-116 1
+card:zacian-rebel-clash-139 1
+card:skiddo-forbidden-light-9 1
+card:snivy-legendary-treasures-rc1 1
+card:emolga-crimson-invasion-35 1
+card:dashing-pouch-crimson-invasion-92
+card:inteleon-sword-shield-59
+card:phione-twilight-masquerade-55
+card:rescue-energy-triumphant-90
+card:dragonite-ex-evolutions-72
+card:dialga-celebrations-20
+card:greedent-chilling-reign-128
+card:chien-pao-surging-sparks-56
+card:dialga-ex-plasma-blast-65
+card:slowpoke-generations-32
+card:dipplin-destined-rivals-17
+card:genesect-ex-fates-collide-64
+card:golduck-cosmic-eclipse-41
+card:lugia-darkness-ablaze-140
+card:volcarona-gx-cosmic-eclipse-35
+card:marshtomp-fusion-strike-63
+card:crocalor-paradox-rift-24
+card:jolteon-hidden-fates-23
+card:az-phantom-forces-91
+card:torkoal-ex-dragon-12
+card:dusclops-ex-deoxys-7
+card:grimmsnarl-v-darkness-ablaze-114
+card:claydol-ancient-origins-33
+card:omanyte-151-138
+card:suicune-darkness-ablaze-37
+card:team-yell-grunt-sword-shield-184
