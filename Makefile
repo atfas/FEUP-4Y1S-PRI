@@ -29,6 +29,15 @@ evaluate:
 	fi
 
 	./evaluation/evaluate.sh
+
+post-eval: evaluate
+	@if [ -z "$(QUERY)" ]; then \
+		echo "Error: QUERY argument is missing. Usage: make post-eval QUERY=0001" >&2; \
+		exit 1; \
+	fi
+	python3 evaluation/scripts/update_qrels.py --results evaluation/output/results.trec --query $(QUERY)
+	python3 evaluation/scripts/export_card.py --query $(QUERY)
+
 # Flatten Schemaless
 flatten:
 	uv run python -m solr.src.flatten data/_collections/databank.json --out-dir data/_solr --sep __
