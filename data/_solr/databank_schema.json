@@ -679,7 +679,7 @@
       "stored": true,
       "indexed": true
     },
-    { "name": "effect_all", "type": "text_card_en", "multiValued": true, "stored": false, "indexed": true },
+    { "name": "effect_all", "type": "text_card_en", "multiValued": true, "stored": false, "indexed": true }
     ],
       "add-copy-field": [
       { "source": "rules_text", "dest": "effect_all" },
@@ -687,5 +687,5 @@
       { "source": "card_text__abilityeffect", "dest": "effect_all" },
       { "source": "card_text__attackeffect", "dest": "effect_all" },
       { "source": "card_text__discard", "dest": "effect_all" }
-    ],
+    ]
 }

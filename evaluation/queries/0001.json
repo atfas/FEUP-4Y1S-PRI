@@ -1,10 +1,15 @@
 {
   "query": "attacks discard pile",
   "fields": "id,score",
-  "limit": 1000,
+  "limit": 30,
   "sort": "score desc,id asc",
   "params": {
     "defType": "edismax",
-    "qf": "title name rules_text card_text__effect"
+    "qf": "effect_all^5.0 card_text__discard^4.0 card_text__attackeffect^3.0 card_text__abilityeffect^2.0 rules_text^1.0",
+    "pf": "effect_all^10.0 card_text__attackeffect^6.0 card_text__discard^4.0",
+    "ps": "4",
+    "mm": "100%",
+    "fq": "-rules_text:(\"have no Abilities\") AND -rules_text:heal",
+    "debugQuery": "true"
   }
 }

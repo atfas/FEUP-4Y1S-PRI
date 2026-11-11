@@ -1,5 +1,5 @@
 # IN1: cards with active discard-pile interactions
-card:abomasnow-forbidden-light-4
+card:abomasnow-forbidden-light-4 1
 card:abomasnow-ultra-prism-38
 card:aether-foundation-employee-lost-thunder-168
 card:aipom-neo-genesis-26
@@ -448,3 +448,41 @@ card:zweilous-dragons-exalted-96
 card:zygarde-gx-forbidden-light-73
 card:zygarde-silver-tempest-134
 card:zygarde-unified-minds-124
+card:dondozo-scarlet-violet-61
+card:greavard-scarlet-violet-104
+card:jellicent-battle-styles-42
+card:alolan-ninetales-cosmic-eclipse-145
+card:houndstone-scarlet-violet-106
+card:wormadam-brilliant-stars-98
+card:lunala-30th-celebration-80
+card:lycanroc-chilling-reign-87
+card:roaring-moon-temporal-forces-109
+card:ceruledge-ex-surging-sparks-36
+card:bunnelby-darkness-ablaze-150
+card:dedenne-darkness-ablaze-78
+card:ethan-s-typhlosion-destined-rivals-34
+card:trevenant-vmax-evolving-skies-14
+card:wattrel-paldea-evolved-80
+card:braixen-silver-tempest-26
+card:dartrix-shrouded-fable-4 1
+card:aegislash-unified-minds-95 1
+card:stonjourner-silver-tempest-101 1
+card:joltik-phantom-forces-26 1
+card:pumpkaboo-phantom-forces-44 1
+card:kirlia-secret-wonders-53 1
+card:surprise-box-unbroken-bonds-187
+card:echoing-horn-chilling-reign-136
+card:familiar-bell-darkness-ablaze-161
+card:murkrow-paldea-evolved-131
+card:junk-arm-triumphant-87
+card:smeargle-breakthrough-123
+card:zoroark-team-up-91
+card:ditto-pokemon-go-53
+card:nanu-team-up-150
+card:thorton-lost-origin-167
+card:grumpig-fates-collide-31
+card:combee-stormfront-57
+card:galarian-mr-rime-darkness-ablaze-36
+card:maxie-ex-team-magma-vs-team-aqua-73
+card:ogre-s-mask-twilight-masquerade-159
+card:ditto-ex-firered-leafgreen-4
