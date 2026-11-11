@@ -1,0 +1,669 @@
+{
+  "add-field": [
+    {
+      "name": "card_text__1",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__abilityeffect",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__abilityjname",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__abilityjtrans",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__abilityname",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__ancient",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__attackcost",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__attackdamage",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__attackeffect",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__attackjname",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__attackjtrans",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__attackname",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__border",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__cardname",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__class",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__color",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__compatibility",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__cost",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__dabcategory",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__damage",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__damagecategory",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__discard",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__effect",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__form",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__fusionstrike",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__future",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__kind",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__letter",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__name",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__name2",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__namecategory",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__ndex",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__ndex2",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__ndex3",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__position",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__powertype",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__print",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__rapidstrike",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__reprint",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__rule",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__singlestrike",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__subclass",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__team",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__toolability",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__toolattack",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__toolgxattack",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__trait",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__type",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__type2",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "card_text__vstarpower",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "evolves_from",
+      "type": "string",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "hp",
+      "type": "pint",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "kind",
+      "type": "string",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "market_price_max",
+      "type": "pdouble",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "market_price_min",
+      "type": "pdouble",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "pokemon__biology",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "pokemon__card_count",
+      "type": "pint",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "pokemon__name",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "pokemon__pokedex_entries__entry",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "pokemon__pokedex_entries__form",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "pokemon__pokedex_entries__games",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "pokemon__pokedex_text",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "price_updated",
+      "type": "pdate",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__artist__artwork",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__artist__card_count",
+      "type": "pint",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__artist__description",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__artist__name",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__artist_name",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__expansion__blurb",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__expansion__card_count",
+      "type": "pint",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__expansion__information",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__expansion__name",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__expansion__size",
+      "type": "pint",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__image_url",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__prices__direct_low",
+      "type": "pdouble",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__prices__low",
+      "type": "pdouble",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__prices__market",
+      "type": "pdouble",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__prices__match",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__prices__mid",
+      "type": "pdouble",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__prices__product_id",
+      "type": "pint",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__prices__product_name",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__prices__sub_type",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "prints__prices__url",
+      "type": "string",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "release_information",
+      "type": "text_general",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "resistance",
+      "type": "string",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "retreat_cost",
+      "type": "pint",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "rules_text",
+      "type": "text_general",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "stage",
+      "type": "string",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "subtype",
+      "type": "string",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "tags",
+      "type": "text_general",
+      "multiValued": true,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "title",
+      "type": "text_general",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "trivia",
+      "type": "text_general",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "weakness",
+      "type": "string",
+      "multiValued": false,
+      "stored": true,
+      "indexed": true
+    }
+  ]
+}
