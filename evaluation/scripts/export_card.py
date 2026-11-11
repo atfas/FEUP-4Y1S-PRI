@@ -52,6 +52,16 @@ def unjudged_ids(qrels_file: Path) -> list[str]:
     return [doc_id for doc_id in dict.fromkeys(unjudged) if doc_id not in judged]
 
 
+def clear_exported_cards(out_dir: Path) -> int:
+    """Remove card JSON files exported by previous runs."""
+    removed = 0
+    for path in out_dir.glob("card_*.json"):
+        if path.is_file():
+            path.unlink()
+            removed += 1
+    return removed
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Print image links for every unjudged card in a query's qrels file.")
     parser.add_argument("--query", "-q", type=query_id_arg, required=True, help="query to review: 0001 to 0005 (1 to 5 also works)")
@@ -65,6 +75,12 @@ def main() -> None:
         raise SystemExit(f"No qrels file found at {qrels_file}")
 
     todo = unjudged_ids(qrels_file)
+
+    args.out_dir.mkdir(parents=True, exist_ok=True)
+    removed = clear_exported_cards(args.out_dir)
+    if removed:
+        print(f"Cleared {removed} previously exported card file(s).")
+
     if not todo:
         print(f"Query {args.query:04d}: no unjudged cards.")
         return
@@ -74,7 +90,6 @@ def main() -> None:
         for doc in json.loads(args.data.read_text(encoding="utf-8"))
         if "id" in doc
     }
-    args.out_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"Query {args.query:04d}: {len(todo)} unjudged cards\n")
     missing = []

@@ -103,7 +103,9 @@ judgments. It runs `make evaluate` first (so Solr must be running), then:
    placeholder (document ID only).
 2. `export_card.py` reads the qrels file, loads the matching documents from
    `data/_solr/databank.json`, saves each one to `output/<document_id>.json`,
-   and prints the document ID followed by its card image link(s).
+   and prints the document ID followed by its card image link(s). Each run
+   clears the card JSON files exported by previous runs first, so `output/`
+   only contains the batch currently under review.
 
 ```bash
 make post-eval QUERY=0001
@@ -120,7 +122,8 @@ card:some-card-2-2 0    # not relevant
 After judging a batch, rerun `make evaluate` (or `make post-eval QUERY=...`
 again) to refresh the metrics and pull the next batch of unjudged results.
 Cards saved to `output/<document_id>.json` can be inspected without querying
-Solr again.
+Solr again, which is handy for images in Japanese or other languages where the
+card text needs a closer look.
 
 > `post-eval` currently accepts topics `0001` to `0005` (the scripts enforce
 > that range). `QUERY=1` and `QUERY=0001` are equivalent.
