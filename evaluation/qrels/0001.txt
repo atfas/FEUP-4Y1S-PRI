@@ -495,8 +495,8 @@ card:coalossal-ascended-heroes-120
 card:banette-secret-wonders-23
 card:electivire-secret-wonders-25
 card:sealeo-ex-legend-maker-43
-card:espathra-paradox-rift-81
 card:typhlosion-heartgold-soulsilver-110
+card:espathra-paradox-rift-81
 card:solrock-supreme-victors-45
 card:mantine-ex-dragon-frontiers-20
 card:honchkrow-lv-x-secret-wonders-132

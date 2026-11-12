@@ -1,0 +1,11 @@
+{
+  "query": "ocean OR sea OR marine OR aquatic",
+  "fields": "id,score",
+  "limit": 30,
+  "sort": "score desc,id asc",
+  "params": {
+    "defType": "edismax",
+    "qf": "pokemon__biology^3.0 pokemon__pokedex_text^3.0 pokemon__pokedex_entries__entry^2.0",
+    "fq": "-pokemon__pokedex_text:(migrating)"
+  }
+}

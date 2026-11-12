@@ -1,5 +1,5 @@
 {
-  "query": "attacks discard pile",
+  "query": "discard pile",
   "fields": "id,score",
   "limit": 30,
   "sort": "score desc,id asc",

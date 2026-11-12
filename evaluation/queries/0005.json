@@ -1,0 +1,12 @@
+{
+  "query": "realistic style",
+  "fields": "id,score",
+  "limit": 30,
+  "sort": "score desc,id asc",
+  "params": {
+    "defType": "edismax",
+    "qf": "prints__artist__description^3.0 prints__artist__artwork^2.0 prints__artist_name^1.0",
+    "pf": "prints__artist__description^5.0 prints__artist__artwork^4.0",
+    "ps": "3"
+  }
+}

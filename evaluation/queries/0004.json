@@ -1,0 +1,10 @@
+{
+  "query": "(draw cards) OR (search deck)",
+  "fields": "id,score",
+  "limit": 30,
+  "sort": "score desc,id asc",
+  "params": {
+    "defType": "edismax",
+    "qf": "card_text__abilityeffect^4.0 card_text__attackeffect^2.0 rules_text^1.0"
+  }
+}

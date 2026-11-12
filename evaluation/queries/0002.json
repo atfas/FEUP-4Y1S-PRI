@@ -1,5 +1,5 @@
 {
-  "query": "(attach OR put) energy (discard) (hand OR Pokémon)",
+  "query": "move discard recover energy",
   "fields": "id,score",
   "limit": 30,
   "sort": "score desc,id asc"
