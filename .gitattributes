@@ -1,0 +1,12 @@
+solr/conf/solrStart.sh text eol=lf
+
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.xml text eol=lf
+*.toml text eol=lf
+*.tex text eol=lf
+*.txt text eol=lf
+Dockerfile text eol=lf
