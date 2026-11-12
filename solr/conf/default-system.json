@@ -1,0 +1,10 @@
+{
+  "update-requesthandler": {
+    "name": "/select",
+    "class": "solr.SearchHandler",
+    "defaults": {
+      "defType": "lucene",
+      "df": "effect_all"
+    }
+  }
+}

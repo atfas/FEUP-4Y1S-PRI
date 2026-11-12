@@ -48,8 +48,8 @@ make pipeline   # uv run python -m pipeline.main -> data/ (cache) and data/_coll
 make eda        # uv run python -m pipeline.src.analysis.characterize -> data/_reports/eda/stats.json,
                 #                                                  report/figures/*.pdf
 make flatten    # uv run python -m solr.src.flatten --sep __ --schema -> data/_solr/
-make evaluate   # evaluate Solr using evaluation/queries/ and evaluation/qrels/
-make post-eval QUERY=0001  # add unjudged results and print card links to judge (see evaluation/README.md)
+make evaluate SYSTEM=default   # select and evaluate the default system (or SYSTEM=advanced)
+make post-eval SYSTEM=default QUERY=0001  # add unjudged results and print card links (see evaluation/README.md)
 make report     # needs LaTeX + acmart; otherwise upload report/ to Overleaf
 ```
 

@@ -1,0 +1,14 @@
+{
+  "update-requesthandler": {
+    "name": "/select",
+    "class": "solr.SearchHandler",
+    "defaults": {
+      "defType": "edismax",
+      "qf": "effect_all^5.0 card_text__attackeffect^3.0 card_text__abilityeffect^2.0 rules_text^1.0",
+      "pf": "effect_all^10.0 card_text__attackeffect^6.0",
+      "ps": "4",
+      "mm": "2<-1 5<80%",
+      "tie": "0.1"
+    }
+  }
+}

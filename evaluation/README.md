@@ -17,7 +17,11 @@ evaluation/
 │   ├── update_qrels.py # add retrieved-but-unjudged docs to a qrels file
 │   └── export_card.py  # print image links for every unjudged card
 ├── build_trec_eval.sh  # clone and build trec_eval
-└── output/             # generated: qrels.trec, results.trec, metrics.txt, card JSON
+└── output/
+    ├── default/        # default-system results and metrics
+    │   └── cards/      # default-system exported card JSON
+    └── advanced/       # advanced-system results and metrics
+        └── cards/      # advanced-system exported card JSON
 ```
 
 ## Input files
@@ -32,12 +36,7 @@ Each query file must be named with a numeric topic ID, for example
   "query": "attacks discard pile",
   "fields": "id,score",
   "limit": 30,
-  "sort": "score desc,id asc",
-  "params": {
-    "defType": "edismax",
-    "qf": "effect_all^5.0 card_text__attackeffect^3.0 rules_text^1.0",
-    "debugQuery": "true"
-  }
+  "sort": "score desc,id asc"
 }
 ```
 
@@ -76,21 +75,28 @@ make flatten                 # data/_collections -> data/_solr (needed by Solr)
 Then run every query and compute metrics:
 
 ```bash
-make evaluate
+make evaluate SYSTEM=default  # use SYSTEM=advanced for the advanced system
 ```
 
 This target builds `trec_eval` the first time (via `build_trec_eval.sh`) and
 then runs `evaluate.sh`, which:
 
-1. converts all `qrels/*.txt` to `output/qrels.trec` (`qrels2trec.py`);
+1. converts all `qrels/*.txt` to `output/<system>/qrels.trec` (`qrels2trec.py`);
 2. runs every `queries/*.json` against Solr (`query_solr.py`);
-3. converts the responses to `output/results.trec` (`solr2trec.py`);
-4. runs `trec_eval` and writes per-query metrics to `output/metrics.txt`.
+3. converts the responses to `output/<system>/results.trec` (`solr2trec.py`);
+4. runs `trec_eval` and writes per-query metrics to `output/<system>/metrics.txt`.
+
+`SYSTEM` is required and must be `default` or `advanced`. Evaluation applies that system's
+configuration to Solr's `/select` handler and verifies it before writing results. The chosen system
+remains active after evaluation; do not run evaluations for different systems concurrently on the
+same core. Re-running a system overwrites that system's
+generated files, but leaves the other system's files untouched. Existing files directly under
+`output/` are not moved or deleted.
 
 Use another Solr port or core when needed:
 
 ```bash
-SOLR_PORT=8984 SOLR_CORE=cards make evaluate
+SOLR_PORT=8984 SOLR_CORE=cards make evaluate SYSTEM=default
 ```
 
 ## Judging results (`make post-eval`)
@@ -98,17 +104,20 @@ SOLR_PORT=8984 SOLR_CORE=cards make evaluate
 `make post-eval` is the interactive loop used to turn retrieved documents into
 judgments. It runs `make evaluate` first (so Solr must be running), then:
 
-1. `update_qrels.py` reads `output/results.trec` and appends every document
+1. `update_qrels.py` reads `output/<system>/results.trec` and appends every document
    retrieved for the topic but missing from `qrels/<topic>.txt` as an unjudged
    placeholder (document ID only).
 2. `export_card.py` reads the qrels file, loads the matching documents from
-   `data/_solr/databank.json`, saves each one to `output/<document_id>.json`,
+   `data/_solr/databank.json`, saves each one to `output/<system>/cards/<document_id>.json`,
    and prints the document ID followed by its card image link(s). Each run
-   clears the card JSON files exported by previous runs first, so `output/`
-   only contains the batch currently under review.
+   clears the card JSON files exported by previous runs for that system first, so its `cards/`
+   directory only contains the batch currently under review.
+
+The source qrels in `qrels/` are shared across systems, allowing both systems to use the same
+judgments. Each system's `qrels.trec` is a snapshot from its own most recent evaluation.
 
 ```bash
-make post-eval QUERY=0001
+make post-eval SYSTEM=default QUERY=0001
 ```
 
 For every link printed, open the image and decide whether the card is relevant
@@ -119,9 +128,10 @@ card:some-card-1-1 1    # relevant
 card:some-card-2-2 0    # not relevant
 ```
 
-After judging a batch, rerun `make evaluate` (or `make post-eval QUERY=...`
-again) to refresh the metrics and pull the next batch of unjudged results.
-Cards saved to `output/<document_id>.json` can be inspected without querying
+After judging a batch, rerun `make evaluate SYSTEM=default` (or
+`make post-eval SYSTEM=default QUERY=...` again) to refresh the metrics and pull the next batch
+of unjudged results. Use `SYSTEM=advanced` when evaluating the advanced system.
+Cards saved to `output/<system>/cards/<document_id>.json` can be inspected without querying
 Solr again, which is handy for images in Japanese or other languages where the
 card text needs a closer look.
 
@@ -144,13 +154,13 @@ card text needs a closer look.
 3. Make sure Solr is running, then bootstrap the topic:
 
    ```bash
-   make post-eval QUERY=NNNN
+   make post-eval SYSTEM=default QUERY=NNNN
    ```
 
    This retrieves the results, appends them to `qrels/NNNN.txt` as unjudged
    placeholders, and prints the image links to review. Grade the cards as
-   described above and rerun `make evaluate` when done.
+   described above and rerun `make evaluate SYSTEM=default` when done.
 
-The search parameters can be tuned by editing `queries/NNNN.json` and rerunning
-`make post-eval QUERY=NNNN`; the qrels file is reused, so already judged cards
-keep their grades.
+System-wide search parameters are configured in `solr/conf/`; query-specific text and filters can
+be edited in `queries/NNNN.json`. Rerun `make post-eval SYSTEM=default QUERY=NNNN` (or use
+`SYSTEM=advanced`); the shared qrels file is reused, so already judged cards keep their grades.

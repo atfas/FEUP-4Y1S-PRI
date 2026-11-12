@@ -1,4 +1,5 @@
 .PHONY: all pipeline eda exploratory flatten evaluate report clean
+export SYSTEM
 
 all: pipeline eda
 
@@ -32,11 +33,11 @@ evaluate:
 
 post-eval: evaluate
 	@if [ -z "$(QUERY)" ]; then \
-		echo "Error: QUERY argument is missing. Usage: make post-eval QUERY=0001" >&2; \
+		echo "Error: QUERY argument is missing. Usage: make post-eval SYSTEM=default QUERY=0001" >&2; \
 		exit 1; \
 	fi
-	python3 evaluation/scripts/update_qrels.py --results evaluation/output/results.trec --query $(QUERY)
-	python3 evaluation/scripts/export_card.py --query $(QUERY)
+	python3 evaluation/scripts/update_qrels.py --results "evaluation/output/$$SYSTEM/results.trec" --query "$(QUERY)"
+	python3 evaluation/scripts/export_card.py --query "$(QUERY)" --out-dir "evaluation/output/$$SYSTEM/cards"
 
 # Flatten Schemaless
 flatten:
