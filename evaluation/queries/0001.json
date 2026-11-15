@@ -2,8 +2,5 @@
   "query": "discard pile",
   "fields": "id,score",
   "limit": 30,
-  "sort": "score desc,id asc",
-  "params": {
-    "fq": "-rules_text:(\"have no Abilities\") AND -rules_text:heal"
-  }
+  "sort": "score desc,id asc"
 }

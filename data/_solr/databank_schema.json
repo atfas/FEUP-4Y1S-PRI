@@ -679,13 +679,55 @@
       "stored": true,
       "indexed": true
     },
-    { "name": "effect_all", "type": "text_card_en", "multiValued": true, "stored": false, "indexed": true }
+    { "name": "effect_all", "type": "text_card_en", "multiValued": true, "stored": false, "indexed": true },
+    { "name": "all_text", "type": "text_card_en", "multiValued": true, "stored": false, "indexed": true }
+ 
     ],
       "add-copy-field": [
       { "source": "rules_text", "dest": "effect_all" },
       { "source": "card_text__effect", "dest": "effect_all" },
       { "source": "card_text__abilityeffect", "dest": "effect_all" },
       { "source": "card_text__attackeffect", "dest": "effect_all" },
-      { "source": "card_text__discard", "dest": "effect_all" }
+      { "source": "card_text__discard", "dest": "effect_all" },
+      { "source": "title", "dest": "all_text" },
+    { "source": "name", "dest": "all_text" },
+    { "source": "tags", "dest": "all_text" },
+    { "source": "trivia", "dest": "all_text" },
+    { "source": "rules_text", "dest": "all_text" },
+    { "source": "release_information", "dest": "all_text" },
+    { "source": "evolves_from", "dest": "all_text" },
+    { "source": "type", "dest": "all_text" },
+    { "source": "kind", "dest": "all_text" },
+    { "source": "stage", "dest": "all_text" },
+    { "source": "subtype", "dest": "all_text" },
+    { "source": "weakness", "dest": "all_text" },
+    { "source": "resistance", "dest": "all_text" },
+
+    { "source": "card_text__effect", "dest": "all_text" },
+    { "source": "card_text__abilityeffect", "dest": "all_text" },
+    { "source": "card_text__abilityname", "dest": "all_text" },
+    { "source": "card_text__attackeffect", "dest": "all_text" },
+    { "source": "card_text__attackname", "dest": "all_text" },
+    { "source": "card_text__cardname", "dest": "all_text" },
+    { "source": "card_text__discard", "dest": "all_text" },
+    { "source": "card_text__compatibility", "dest": "all_text" },
+    { "source": "card_text__rule", "dest": "all_text" },
+    { "source": "card_text__trait", "dest": "all_text" },
+    { "source": "card_text__type", "dest": "all_text" },
+    { "source": "card_text__subclass", "dest": "all_text" },
+    { "source": "card_text__vstarpower", "dest": "all_text" },
+
+    { "source": "pokemon__name", "dest": "all_text" },
+    { "source": "pokemon__biology", "dest": "all_text" },
+    { "source": "pokemon__pokedex_text", "dest": "all_text" },
+    { "source": "pokemon__pokedex_entries__entry", "dest": "all_text" },
+
+    { "source": "prints__artist__name", "dest": "all_text" },
+    { "source": "prints__artist_name", "dest": "all_text" },
+    { "source": "prints__artist__description", "dest": "all_text" },
+    { "source": "prints__artist__artwork", "dest": "all_text" },
+    { "source": "prints__expansion__name", "dest": "all_text" },
+    { "source": "prints__expansion__blurb", "dest": "all_text" },
+    { "source": "prints__expansion__information", "dest": "all_text" }
     ]
 }
