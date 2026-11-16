@@ -62,6 +62,7 @@ uv run python "${EVALUATION_DIR}/scripts/query_solr.py" \
 
 "${TREC_EVAL_BIN}" \
     -q \
+    -c \
     -m all_trec \
     "${OUTPUT_DIR}/qrels.trec" \
     "${OUTPUT_DIR}/results.trec" \
