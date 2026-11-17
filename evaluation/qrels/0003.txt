@@ -1,7 +1,7 @@
 card:aaron-s-collection-rising-rivals-88 0 
 card:abomasnow-forbidden-light-4 0
 card:abomasnow-ultra-prism-38 0
-card:accelgor-crimson-invasion-9 1
+card:accelgor-crimson-invasion-9 0
 card:alakazam-4-rising-rivals-38 0
 card:alolan-golem-team-up-37 0
 card:alolan-ninetales-gx-guardians-rising-22 0
@@ -105,7 +105,7 @@ card:gastrodon-lost-origin-102 1
 card:genesect-ex-fates-collide-64 0
 card:giovanni-s-charisma-151-161 0
 card:giratina-ultra-prism-58 0
-card:gliscor-roaring-skies-37 1
+card:gliscor-roaring-skies-37 0
 card:golbat-battle-styles-90 0
 card:golduck-cosmic-eclipse-41 1
 card:good-rod-unleashed-76 0
@@ -237,7 +237,7 @@ card:shroodle-paldea-evolved-144 0
 card:sigilyph-fusion-strike-123 0
 card:skiddo-forbidden-light-9 0
 card:skitty-ex-ruby-sapphire-70 0
-card:skorupi-supreme-victors-128 1
+card:skorupi-supreme-victors-128 0
 card:slaking-celestial-storm-115 0
 card:slaking-ex-ruby-sapphire-12 0
 card:slowpoke-151-79 1
@@ -282,8 +282,8 @@ card:unown-r-legends-awakened-77 0
 card:ursaluna-astral-radiance-124 0
 card:varoom-paldean-fates-64 0
 card:virizion-v-astral-radiance-164 0
-card:volbeat-great-encounters-92 1
-card:volbeat-twilight-masquerade-9 1
+card:volbeat-great-encounters-92 0
+card:volbeat-twilight-masquerade-9 0
 card:volcarona-gx-cosmic-eclipse-35 0
 card:volo-lost-origin-169 0
 card:wailord-vivid-voltage-32 1
