@@ -33,10 +33,10 @@ Both settings update the `/select` handler, so the evaluation queries work uncha
 system. Starting Solr recreates the core and resets its configuration; select a system afterward
 for manual searches.
 
-The advanced system searches the combined `effect_all` field and gives additional weight to
-attack effects, ability effects and rules text. Phrase matches are boosted, and `mm` lets a
-limited number of terms be absent while requiring most terms in longer queries. To query the
-active system:
+The advanced system uses eDisMax over two fields: `effect_all` (attack, ability and rules
+text, weight 2) and `all_text` (every textual field of the card, weight 1). Phrase matches in
+either field get an extra boost (`pf`, slop 4). `mm=2<75%` requires every term in queries with
+up to two terms and 75% of the terms in longer queries; explicit `OR` queries are unaffected.
 
 ```bash
 curl --get 'http://localhost:8983/solr/cards/select' \

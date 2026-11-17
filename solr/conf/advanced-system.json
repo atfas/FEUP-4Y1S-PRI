@@ -4,10 +4,10 @@
     "class": "solr.SearchHandler",
     "defaults": {
       "defType": "edismax",
-      "qf": "card_text__effect^5.0 effect_all^2.0 all_text^1.0",
-      "pf": "card_text__effect^5.0 effect_all^2.0 all_text^1.0",
+      "qf": "effect_all^2.0 all_text^1.0",
+      "pf": "effect_all^4.0 all_text^4.0",
       "ps": "4",
-      "mm": "1",
+      "mm": "2<75%",
       "tie": "0.1"
     }
   }
