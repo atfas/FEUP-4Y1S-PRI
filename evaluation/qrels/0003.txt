@@ -235,66 +235,69 @@ card:shaymin-prismatic-evolutions-87 0
 card:shellos-secret-wonders-107 1
 card:shroodle-paldea-evolved-144 0
 card:sigilyph-fusion-strike-123 0
-card:skiddo-forbidden-light-9 0
-card:skitty-ex-ruby-sapphire-70 0
-card:skorupi-supreme-victors-128 1
-card:slaking-celestial-storm-115 0
-card:slaking-ex-ruby-sapphire-12 0
-card:slowpoke-151-79 1
-card:slowpoke-generations-32 1
-card:snivy-legendary-treasures-rc1 0
-card:spiral-energy-chilling-reign-159 0
-card:starmie-xy-34 1
-card:staryu-ex-delta-species-85 1
-card:staryu-legends-awakened-122 1
-card:staryu-next-destinies-23 1
-card:suicune-aquapolis-h25 0
-card:suicune-darkness-ablaze-37 0
-card:super-rod-neo-genesis-103 0
-card:swampert-great-encounters-9 1
-card:swanna-cosmic-eclipse-60 1
-card:swellow-destined-rivals-157 0
-card:talonflame-guardians-rising-111 0
-card:tarragon-perfect-order-85 0
-card:teal-mask-ogerpon-destined-rivals-26 0
-card:teal-mask-ogerpon-twilight-masquerade-24 0
-card:team-aqua-s-manectric-ex-team-magma-vs-team-aqua-29 0
-card:team-galactic-s-wager-mysterious-treasures-115 0
-card:team-magma-s-camerupt-double-crisis-2 0
-card:team-magma-s-camerupt-ex-team-magma-vs-team-aqua-19 0
-card:team-yell-grunt-sword-shield-184 0
-card:team-yell-s-cheer-brilliant-stars-149 0
-card:tentacool-aquapolis-113 1
-card:therapeutic-energy-paldea-evolved-193 0
-card:thorton-lost-origin-167 0
-card:time-capsule-neo-genesis-90 0
-card:togetic-unbroken-bonds-137 0
-card:torkoal-cosmic-eclipse-29 0
-card:torkoal-ex-dragon-12 0
-card:tornadus-emerging-powers-89 0
-card:toucannon-vivid-voltage-145 0
-card:town-volunteers-aquapolis-136 0
-card:toxapex-darkness-ablaze-52 1
-card:trash-exchange-gym-heroes-126 0
-card:tropius-brilliant-stars-5 0
-card:typhlosion-ex-unseen-forces-17 0
-card:unown-r-legends-awakened-77 0
-card:ursaluna-astral-radiance-124 1
-card:varoom-paldean-fates-64 0
-card:virizion-v-astral-radiance-164 0
-card:volbeat-great-encounters-92 1
-card:volbeat-twilight-masquerade-9 1
-card:volcarona-gx-cosmic-eclipse-35 0
-card:volo-lost-origin-169 0
-card:wailord-vivid-voltage-32 1
-card:wellspring-mask-ogerpon-destined-rivals-67 0
-card:wishiwashi-gx-guardians-rising-38 1
-card:wormadam-fates-collide-44 0
-card:zacian-rebel-clash-139 0
-card:zapdos-aquapolis-h32 0
-card:zapdos-ex-ex-firered-leafgreen-116 0
-card:zebstrika-breakpoint-49 0
+card:skiddo-forbidden-light-9 0 0
+card:skitty-ex-ruby-sapphire-70 0 0
+card:skorupi-supreme-victors-128 0 1
+card:slaking-celestial-storm-115 0 0
+card:slaking-ex-ruby-sapphire-12 0 0
+card:slowpoke-151-79 1 1
+card:slowpoke-generations-32 1 1
+card:snivy-legendary-treasures-rc1 0 0
+card:spiral-energy-chilling-reign-159 0 0
+card:starmie-xy-34 1 1
+card:staryu-ex-delta-species-85 1 1
+card:staryu-legends-awakened-122 1 1
+card:staryu-next-destinies-23 1 1
+card:suicune-aquapolis-h25 0 0
+card:suicune-darkness-ablaze-37 0 0
+card:super-rod-neo-genesis-103 0 0
+card:swampert-great-encounters-9 1 1
+card:swanna-cosmic-eclipse-60 1 1
+card:swellow-destined-rivals-157 0 0
+card:talonflame-guardians-rising-111 0 0
+card:tarragon-perfect-order-85 0 0
+card:teal-mask-ogerpon-destined-rivals-26 0 0
+card:teal-mask-ogerpon-twilight-masquerade-24 0 0
+card:team-aqua-s-manectric-ex-team-magma-vs-team-aqua-29 0 0
+card:team-galactic-s-wager-mysterious-treasures-115 0 0
+card:team-magma-s-camerupt-double-crisis-2 0 0
+card:team-magma-s-camerupt-ex-team-magma-vs-team-aqua-19 0 0
+card:team-yell-grunt-sword-shield-184 0 0
+card:team-yell-s-cheer-brilliant-stars-149 0 0
+card:tentacool-aquapolis-113 1 1
+card:therapeutic-energy-paldea-evolved-193 0 0
+card:thorton-lost-origin-167 0 0
+card:time-capsule-neo-genesis-90 0 0
+card:togetic-unbroken-bonds-137 0 0
+card:torkoal-cosmic-eclipse-29 0 0
+card:torkoal-ex-dragon-12 0 0
+card:tornadus-emerging-powers-89 0 0
+card:toucannon-vivid-voltage-145 0 0
+card:town-volunteers-aquapolis-136 0 0
+card:toxapex-darkness-ablaze-52 0 1
+card:trash-exchange-gym-heroes-126 0 0
+card:tropius-brilliant-stars-5 0 0
+card:typhlosion-ex-unseen-forces-17 0 0
+card:unown-r-legends-awakened-77 0 0
+card:ursaluna-astral-radiance-124 0 1
+card:varoom-paldean-fates-64 0 0
+card:virizion-v-astral-radiance-164 0 0
+card:volbeat-great-encounters-92 0 1
+card:volbeat-twilight-masquerade-9 0 1
+card:volcarona-gx-cosmic-eclipse-35 0 0
+card:volo-lost-origin-169 0 0
+card:wailord-vivid-voltage-32 1 1
+card:wellspring-mask-ogerpon-destined-rivals-67 1 0
+card:wishiwashi-gx-guardians-rising-38 1 1
+card:wormadam-fates-collide-44 0 0
+card:zacian-rebel-clash-139 0 0
+card:zapdos-aquapolis-h32 0 0
+card:zapdos-ex-ex-firered-leafgreen-116 0 0
+card:zebstrika-breakpoint-49 0 0
 card:zekrom-roaring-skies-64 0
+card:manaphy-unleashed-3 1
+card:manaphy-primal-clash-56 1
+card:manaphy-shining-fates-24 1 0
 card:gastrodon-secret-wonders-8 1
 card:shellos-secret-wonders-106 1
 card:gastrodon-secret-wonders-9 1
