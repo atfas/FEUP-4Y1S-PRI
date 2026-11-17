@@ -1,5 +1,5 @@
 {
-  "query": "(draw cards) OR (search deck)",
+  "query": "ability draw cards search deck",
   "fields": "id,score",
   "limit": 30,
   "sort": "score desc,id asc"

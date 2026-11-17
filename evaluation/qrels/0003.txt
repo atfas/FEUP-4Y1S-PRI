@@ -1,16 +1,16 @@
 card:aaron-s-collection-rising-rivals-88 0 
-card:abomasnow-forbidden-light-4 1
+card:abomasnow-forbidden-light-4 0
 card:abomasnow-ultra-prism-38 0
 card:accelgor-crimson-invasion-9 0
-card:alakazam-4-rising-rivals-38
-card:alolan-golem-team-up-37
-card:alolan-ninetales-gx-guardians-rising-22
+card:alakazam-4-rising-rivals-38 0
+card:alolan-golem-team-up-37 0
+card:alolan-ninetales-gx-guardians-rising-22 0
 card:ampharos-ex-unseen-forces-1 0
 card:arezu-lost-origin-153 0
 card:aroma-lady-evolving-skies-141 0
 card:aromatic-g-energy-vivid-voltage-162 0
 card:articuno-ex-ex-firered-leafgreen-114 0
-card:articuno-gx-celestial-storm-31
+card:articuno-gx-celestial-storm-31 0
 card:az-phantom-forces-91 0
 card:bastiodon-gl-rising-rivals-2 0
 card:blissey-scarlet-violet-145 0
@@ -20,7 +20,7 @@ card:bronzor-fates-collide-60 0
 card:bubbly-w-energy-chaos-rising-84 0
 card:cacnea-ex-power-keepers-46 0
 card:camerupt-supreme-victors-18 0
-card:carbink-lost-thunder-117
+card:carbink-lost-thunder-117 0
 card:charizard-g-lv-x-supreme-victors-143 0
 card:chien-pao-surging-sparks-56 0
 card:cinderace-sword-shield-34 0
@@ -34,40 +34,40 @@ card:cramorant-crown-zenith-053
 card:crocalor-paradox-rift-24 0
 card:crossceiver-fusion-strike-231 0
 card:cyndaquil-ex-unseen-forces-54 0
-card:dark-dragonite-ex-team-rocket-returns-15 0
+card:dark-dragonite-ex-team-rocket-returns-15 1
 card:darkrai-cresselia-legend-triumphant-99 0
 card:dashing-pouch-crimson-invasion-92 0
 card:dedenne-ex-paldea-evolved-93 0
 card:delcatty-ex-legend-maker-4 0
 card:delcatty-ex-ruby-sapphire-5 0
-card:dialga-celebrations-20
+card:dialga-celebrations-20 0
 card:dialga-ex-plasma-blast-65 0
 card:dipplin-destined-rivals-17 0
 card:dizzying-valley-phantasmal-flames-88 0
 card:doublade-breakpoint-61 0
-card:dragonite-151-149 0
-card:dragonite-dragon-vault-5 0
-card:dragonite-ex-delta-species-3 0
-card:dragonite-ex-evolutions-72 0
-card:dragonite-ex-ex-dragon-90 0
-card:dragonite-ex-ex-dragon-frontiers-91 0
-card:dragonite-ex-furious-fists-74 0
-card:dragonite-ex-obsidian-flames-159 0
-card:dragonite-fb-supreme-victors-56
-card:dragonite-gx-dragon-majesty-37 0
-card:dragonite-gx-unified-minds-152
-card:dragonite-legends-awakened-2 0
-card:dragonite-plasma-freeze-83 0
-card:dragonite-roaring-skies-51 0
-card:dragonite-roaring-skies-52 0
-card:dragonite-silver-tempest-131 0
-card:dragonite-sun-moon-96 0
-card:dragonite-team-up-119
-card:dragonite-triumphant-18 0
-card:dragonite-unified-minds-151
-card:dragonite-v-evolving-skies-191 0
-card:dragonite-vstar-pokemon-go-50 0
-card:dragonite-wizards-promo-5
+card:dragonite-151-149 1
+card:dragonite-dragon-vault-5 1
+card:dragonite-ex-delta-species-3 1
+card:dragonite-ex-evolutions-72 1
+card:dragonite-ex-ex-dragon-90 1
+card:dragonite-ex-ex-dragon-frontiers-91 1
+card:dragonite-ex-furious-fists-74 1
+card:dragonite-ex-obsidian-flames-159 1
+card:dragonite-fb-supreme-victors-56 1
+card:dragonite-gx-dragon-majesty-37 1
+card:dragonite-gx-unified-minds-152 1
+card:dragonite-legends-awakened-2 1
+card:dragonite-plasma-freeze-83 1
+card:dragonite-roaring-skies-51 1
+card:dragonite-roaring-skies-52 1
+card:dragonite-silver-tempest-131 1
+card:dragonite-sun-moon-96 1
+card:dragonite-team-up-119 1
+card:dragonite-triumphant-18 1
+card:dragonite-unified-minds-151 1
+card:dragonite-v-evolving-skies-191 1
+card:dragonite-vstar-pokemon-go-50 1
+card:dragonite-wizards-promo-5 1
 card:duosion-black-white-56 0
 card:dusclops-ex-deoxys-7 0
 card:eco-arm-ancient-origins-71 0
@@ -76,7 +76,7 @@ card:electivire-diamond-pearl-3 0
 card:electivire-fb-supreme-victors-4 0
 card:electrode-skyridge-36 0
 card:emolga-crimson-invasion-35 0
-card:energy-recycle-system-ex-dragon-84 1
+card:energy-recycle-system-ex-dragon-84 0
 card:energy-restore-expedition-141 0
 card:energy-retrieval-base-set-81 0
 card:energy-stadium-neo-destiny-99 0
@@ -85,13 +85,13 @@ card:entei-aquapolis-h8 0
 card:exp-all-neo-destiny-93 0
 card:fantina-lost-origin-157 0
 card:festival-grounds-twilight-masquerade-149 0
-card:fire-crystal-unbroken-bonds-173
+card:fire-crystal-unbroken-bonds-173 0
 card:fisherman-skyridge-125 0
 card:flabebe-breakthrough-101 0
-card:flabebe-cosmic-eclipse-149
+card:flabebe-cosmic-eclipse-149 0
 card:flabebe-flashfire-62 0
 card:flabebe-flashfire-63 0
-card:flabebe-forbidden-light-84
+card:flabebe-forbidden-light-84 0
 card:flabebe-twilight-masquerade-86 0
 card:floette-twilight-masquerade-87 0
 card:florges-flashfire-66 0
@@ -104,7 +104,7 @@ card:gardevoir-ex-scarlet-violet-86 0
 card:gastrodon-lost-origin-102 1
 card:genesect-ex-fates-collide-64 0
 card:giovanni-s-charisma-151-161 0
-card:giratina-ultra-prism-58
+card:giratina-ultra-prism-58 0
 card:gliscor-roaring-skies-37 0
 card:golbat-battle-styles-90 0
 card:golduck-cosmic-eclipse-41 1
@@ -144,11 +144,11 @@ card:lapras-v-sword-shield-49 1
 card:latios-fusion-strike-194 0
 card:ledian-skyridge-h14 0
 card:lickilicky-furious-fists-79 0
-card:light-dragonite-neo-destiny-14 0
+card:light-dragonite-neo-destiny-14 1
 card:light-togetic-neo-destiny-15 0
 card:lost-city-lost-origin-161 0
 card:loudred-ex-emerald-35 0
-card:lugia-darkness-ablaze-140 0
+card:lugia-darkness-ablaze-140 1
 card:lum-berry-ex-ruby-sapphire-84 0
 card:lure-ball-skyridge-128 0
 card:machamp-triumphant-95 0
@@ -179,7 +179,7 @@ card:miss-fortune-sisters-lost-origin-164 0
 card:moltres-ex-ex-firered-leafgreen-115 0
 card:moltres-majestic-dawn-10 0
 card:moltres-skyridge-h20 0
-card:nessa-vivid-voltage-157 1
+card:nessa-vivid-voltage-157 0
 card:night-maintenance-mysterious-treasures-113 0
 card:night-stretcher-shrouded-fable-61 0
 card:nincada-ex-dragon-68 0
@@ -274,7 +274,7 @@ card:torkoal-ex-dragon-12 0
 card:tornadus-emerging-powers-89 0
 card:toucannon-vivid-voltage-145 0
 card:town-volunteers-aquapolis-136 0
-card:toxapex-darkness-ablaze-52 0
+card:toxapex-darkness-ablaze-52 1
 card:trash-exchange-gym-heroes-126 0
 card:tropius-brilliant-stars-5 0
 card:typhlosion-ex-unseen-forces-17 0
@@ -287,7 +287,7 @@ card:volbeat-twilight-masquerade-9 0
 card:volcarona-gx-cosmic-eclipse-35 0
 card:volo-lost-origin-169 0
 card:wailord-vivid-voltage-32 1
-card:wellspring-mask-ogerpon-destined-rivals-67 1
+card:wellspring-mask-ogerpon-destined-rivals-67 0
 card:wishiwashi-gx-guardians-rising-38 1
 card:wormadam-fates-collide-44 0
 card:zacian-rebel-clash-139 0
@@ -298,3 +298,25 @@ card:zekrom-roaring-skies-64 0
 card:manaphy-unleashed-3 1
 card:manaphy-primal-clash-56 1
 card:manaphy-shining-fates-24 1
+card:gastrodon-secret-wonders-8 1
+card:shellos-secret-wonders-106 1
+card:gastrodon-secret-wonders-9 1
+card:gastrodon-rising-rivals-21 1
+card:golduck-151-55 1
+card:wishiwashi-darkness-ablaze-50 1
+card:magikarp-stormfront-65 1
+card:tapu-fini-chilling-reign-40 0
+card:wishiwashi-ex-delta-reign-29 1
+card:wailord-v-champion-s-path-13 1
+card:dhelmise-unified-minds-20 1
+card:shellos-rising-rivals-80 1
+card:phione-silver-tempest-45 1
+card:finneon-lost-origin-40 1
+card:phione-dragon-majesty-30 1
+card:relicanth-unified-minds-111 1
+card:relicanth-supreme-victors-sh8 1
+card:wailord-guardians-rising-30 1
+card:relicanth-ancient-origins-23 1
+card:starmie-breakthrough-30 1
+card:milotic-crimson-invasion-27 1
+card:lugia-legend-heartgold-soulsilver-113 1

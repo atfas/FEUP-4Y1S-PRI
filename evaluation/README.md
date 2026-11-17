@@ -85,6 +85,7 @@ then runs `evaluate.sh`, which:
 2. runs every `queries/*.json` against Solr (`query_solr.py`);
 3. converts the responses to `output/<system>/results.trec` (`solr2trec.py`);
 4. runs `trec_eval` and writes per-query metrics to `output/<system>/metrics.txt`.
+   Topics with graded qrels but no retrieved results are included with zero scores.
 
 `SYSTEM` is required and must be `default` or `advanced`. Evaluation applies that system's
 configuration to Solr's `/select` handler and verifies it before writing results. The chosen system
