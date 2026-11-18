@@ -349,3 +349,10 @@ card:radiant-venusaur-pokemon-go-4 1
 card:regidrago-astral-radiance-118 1
 card:thwackey-twilight-masquerade-15 1
 card:luvdisc-crown-zenith-35 1
+card:galarian-articuno-v-chilling-reign-58 1
+card:larry-s-komala-ascended-heroes-175 1
+card:togekiss-obsidian-flames-85 1
+card:squawkabilly-ex-paldea-evolved-169 1
+card:pidgeot-ex-obsidian-flames-164 1
+card:kricketune-v-battle-styles-6 1
+card:mega-kangaskhan-ex-mega-evolution-104 1

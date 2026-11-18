@@ -237,7 +237,7 @@ card:shroodle-paldea-evolved-144 0
 card:sigilyph-fusion-strike-123 0
 card:skiddo-forbidden-light-9
 card:skitty-ex-ruby-sapphire-70
-card:skorupi-supreme-victors-128
+card:skorupi-supreme-victors-128 0
 card:slaking-celestial-storm-115
 card:slaking-ex-ruby-sapphire-12
 card:slowpoke-151-79
@@ -277,7 +277,7 @@ card:town-volunteers-aquapolis-136
 card:toxapex-darkness-ablaze-52
 card:trash-exchange-gym-heroes-126
 card:tropius-brilliant-stars-5
-card:typhlosion-ex-unseen-forces-17
+card:typhlosion-ex-unseen-forces-17 0
 card:unown-r-legends-awakened-77
 card:ursaluna-astral-radiance-124
 card:varoom-paldean-fates-64
@@ -289,9 +289,9 @@ card:volo-lost-origin-169
 card:wailord-vivid-voltage-32
 card:wellspring-mask-ogerpon-destined-rivals-67
 card:wishiwashi-gx-guardians-rising-38
-card:wormadam-fates-collide-44
+card:wormadam-fates-collide-44 1
 card:zacian-rebel-clash-139
-card:zapdos-aquapolis-h32
+card:zapdos-aquapolis-h32 0
 card:zapdos-ex-ex-firered-leafgreen-116
-card:zebstrika-breakpoint-49
+card:zebstrika-breakpoint-49 1
 card:zekrom-roaring-skies-64

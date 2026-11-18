@@ -338,3 +338,4 @@ card:morpeko-v-union-swsh-promo-215 1
 card:feraligatr-fusion-strike-57 1
 card:zeraora-unbroken-bonds-60 1
 card:team-magma-s-torkoal-ex-team-magma-vs-team-aqua-12 1
+card:zinnia-s-trust-delta-reign-103 1
